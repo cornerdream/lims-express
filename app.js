@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:false}))//配置解析表单请求体x-www-
 //app.use(morgan(":method :url :status :res[content-length]-:response-time ms"))//日志输出
 app.use(morgan("dev"))//开发模式日志
 app.use(express.static(__dirname+'/public'))
-// app.use(cors())//跨域
+app.use(cors())//跨域
 // app.all('*', function(req, res, next) {
 //     // 设置允许跨域的域名,*代表允许任意域名跨域
 //     res.header('Access-Control-Allow-Origin','*');

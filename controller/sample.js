@@ -2,7 +2,7 @@ const {sample} = require('../model')
 
 exports.getSample = async(req,res,next)=>{
     try{
-        console.log(req.query,req.body,req.url)
+        console.log(req.query,req.body,req.url,req.params)
         let {limit=10,offset=0,filter={},sort={}} = req.query
         console.log(limit,offset,filter,sort)
         let filterParam = !filter?({}):JSON.parse(filter)
